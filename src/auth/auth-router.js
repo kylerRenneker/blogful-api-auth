@@ -17,9 +17,6 @@ authRouter
             req.app.get('db'),
             loginUser.user_name
         )
-            // .then(res => {
-            //     console.log(res)
-            // })
             .then(dbUser => {
                 if (!dbUser)
                     return res.status(400).json({
